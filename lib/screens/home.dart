@@ -27,7 +27,7 @@ class _HomeState extends State<Home> {
       List locationDetails = await locationService.getLocation();
 
       final WeatherService weatherService = WeatherService(
-          'https://www.meteosource.com/api/v1/free/point?lat=${locationDetails[0]}&lon=${locationDetails[1]}&sections=daily&timezone=UTC&language=en&units=metric&key=ui659dlb6uytvgx13psg5k1gejpz0p4dhtrmh8iq');
+          'https://www.meteosource.com/api/v1/free/point?lat=${locationDetails[0]}&lon=${locationDetails[1]}&sections=daily&timezone=UTC&language=en&units=metric&key=YOUR_API_KEY');
       Map<String, dynamic> weatherData = await weatherService.getWeatherData();
 
       setState(() {
