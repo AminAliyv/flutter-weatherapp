@@ -1,25 +1,19 @@
 import 'package:geolocator/geolocator.dart';
 
-class LocationService{
+class LocationService {
   Future<List> getLocation() async {
-    //Bu funksiya ile istifadecinin konumunu almaliyiq. Bunun ucun geolocatordan istifade edirik.
-    List locationDetails =
-        []; // Bu listde istifadeciden aldigimiz paralel ve meredian olmalidi.
-    // Kullanıcının konumu açık mı kontrol ettik
-    final bool serviceEnabled = await Geolocator
-        .isLocationServiceEnabled(); //GeoLocatorun bu metodunu isLocationServiceEnabled = serviceEnabled
+    List locationDetails = [];
+
+    final bool serviceEnabled = await Geolocator.isLocationServiceEnabled();
     if (!serviceEnabled) {
-      //Cihazdaki konum baglidisa
-      Future.error("Konum servisiniz kapalı");
+      Future.error("Your location service is turned off");
     }
 
-    LocationPermission permission = await Geolocator
-        .checkPermission(); //GeoLocatorun checkPermission metodunu = permission
+    LocationPermission permission = await Geolocator.checkPermission();
     if (permission == LocationPermission.denied) {
-      //Eger istifadeci konuma erisime icaze vermeyibse
       permission = await Geolocator.requestPermission();
       if (permission == LocationPermission.denied) {
-        Future.error("Konum izni vermelisiniz");
+        Future.error("You must grant location permission");
       }
     }
 

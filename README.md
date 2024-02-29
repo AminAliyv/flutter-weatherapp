@@ -1,16 +1,28 @@
-# weatherapp
+# Flutter Weather App
 
-A new Flutter project.
+This Flutter Weather App is created to display weather information using the [MeteoSource](https://www.meteosource.com/) API.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+To run the project, follow these steps:
 
-A few resources to get you started if this is your first Flutter project:
+1. Create an account on [MeteoSource](https://www.meteosource.com/).
+2. Navigate to the project directory in the terminal or command prompt and run the `flutter pub get` command.
+3. Replace `YOUR_API_KEY` in the `lib/screens/home.dart` file with your own API key.
+4. Run the project by executing the `flutter run` command in the terminal or command prompt.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Screenshots
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Weather App](weatherapp.jpeg)
+
+## Usage
+
+After running the application, you can view current weather information and explore forecasts for the upcoming days.
+
+## Contribution
+
+If you would like to contribute to the project, please fork it and submit a pull request.
+
+## License
+
+This project is licensed under the [License Name] - see the [Detailed License Information].

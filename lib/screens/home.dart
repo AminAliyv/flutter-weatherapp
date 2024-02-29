@@ -42,7 +42,7 @@ class _HomeState extends State<Home> {
         windspeed = weatherData['daily']['data'][0]['all_day']['wind']['speed'];
       });
     } catch (e) {
-      print('Hava durumu verisi alınamadı: $e');
+      print('Weather data could not be retrieved:$e');
     }
   }
 
