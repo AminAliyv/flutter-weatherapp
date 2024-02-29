@@ -23,6 +23,3 @@ After running the application, you can view current weather information and expl
 
 If you would like to contribute to the project, please fork it and submit a pull request.
 
-## License
-
-This project is licensed under the [License Name] - see the [Detailed License Information].
